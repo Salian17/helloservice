@@ -17,7 +17,8 @@ services:
     container_name: jenkins-agent
     environment:
       - JENKINS_URL=http://jenkins-server:8080
-      - JENKINS_AGENT_NAME=SecondName
+      - JENKINS_AGENT_NAME=agent
+      - JENKINS_AGENT_WORKDIR=/home/jenkins/agen
       - JENKINS_SECRET=506289a2815600358716407679b2865d6dce87c522d2ab63d762eea7814c2034
     volumes:
       - agent_workdir:/home/jenkins/agent
